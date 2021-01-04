@@ -1,9 +1,34 @@
 * {
-
+    padding: 0;
+    margin: 0;
 }
 body {
-
+    background-image: url();
+    font-family: 'Noto Serif TC', serif;
 }
+/* 導覽列 */
+nav {
+    display: grid;
+    grid-template-columns: 10% 75% auto;
+    background: linear-gradient(0deg,#1C7505,#1B9E02);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    padding: 15px 25px;/*p15px25px*/
+    align-items: center;/*grid專用的格內垂直對齊*/
+}
+#logo img {
+    height: 65px;
+}
+#navi {padding: 15px;}
+#navi a {
+    font-weight: 700;
+    font-size : 18px ;
+    text-decoration: none;
+    padding: 10px;
+}
+#social {
+    background-color: #98546a;/*TEST*/
+}
+#social img {margin: 5px;}
 /* 公告  */
 
 /* 主打商品( to 商品型錄)  */
