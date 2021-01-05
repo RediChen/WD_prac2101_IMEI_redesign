@@ -10,7 +10,7 @@ body {
 nav {
     display: grid;
     grid-template-columns: 10% 75% auto;
-    background: linear-gradient(0deg,#1C7505,#1B9E02);
+    background: linear-gradient(0deg,#EBFF5F 0%,#6ABD0D 35%,#6ABD0D 65%,#EBFF5F 100%);
     box-shadow: 0 5px 10px rgba(0,0,0,0.15);
     padding: 15px 25px;/*p15px25px*/
     align-items: center;/*grid專用的格內垂直對齊*/
