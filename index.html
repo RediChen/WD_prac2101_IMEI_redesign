@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ZH">
+
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Redii Chen">
@@ -7,12 +8,17 @@
     <title>義美 | I-MEI</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- 導覽列 -->
     <nav>
-        <div id="logo"><img src="./img/LOGO_64px.png" alt="I-MEI 義美 LOGO"></div>
+        <div id="logo">
+            <a href="#"><img src="./img/LOGO_64px.png" alt="I-MEI 義美 LOGO"></a>
+        </div>
+        <!--圖片超連結：a img /a-->
         <div id="navi">
             <a href="">主打商品</a>
             <a href="">門市查詢</a>
@@ -21,14 +27,49 @@
             <a href="">其他服務</a>
         </div>
         <div id="social">
-            <img src="./img/icon_FB.png" alt="facebook 義美粉絲專頁"></a>
-            <img src="./img/icon_YT.png" alt="youtube 義美youtube頻道"></a>
+            <a href="https://www.facebook.com/imeifoods" target="blank">
+                <img src="./img/icon_FB.png" alt="facebook 義美粉絲專頁">
+            </a>
+            <a href="https://www.youtube.com/user/foodschannel" target="blank">
+                <img src="./img/icon_YT.png" alt="youtube 義美youtube頻道">
+            </a>
         </div>
     </nav>
     <!-- 公告 -->
-
+    <!--輪播圖使用現成的code套件-->
     <!-- 主打商品( to 商品型錄) -->
-
+    <!-- section>(div>.text>h1+hr+p+a^.pic>img)*3 -->
+    <section id="promote">
+        <div>
+            <!--兩個兩個一組，不必6個一組-->
+            <div class="text">
+                <h1>義美年菜</h1>
+                <hr>
+                <p>在20年12/11到21年1/31期間，預購任選3件(含)以上95折，
+                    任選5件(含)以上92折。學員還能獨享優惠折後再95折。</p>
+                <a href="">MORE</a>
+            </div>
+            <div class="pic"><img src="./img/Promote cuisines.png" alt=""></div>
+        </div>
+        <div>
+            <div class="text">
+                <h1>年貨街町</h1>
+                <hr>
+                <p>義美嚴選食材，嚴格把關品質。除了美味，更重視食品的安全。讓大家在歡樂團聚過節之際，能放心闔家團圓的美食。</p>
+                <a href="">MORE</a>
+            </div>
+            <div class="pic"><img src="./img/Promote TNY goods.png" alt=""></div>
+        </div>
+        <div>
+            <div class="text">
+                <h1>芋頭鮮奶雞蛋布丁</h1>
+                <hr>
+                <p>吃得到芋泥餡料，不含人工防腐劑，使用真正的雞蛋及優質台灣鮮乳。</p>
+                <a href="">MORE</a>
+            </div>
+            <div class="pic"><img src="./img/Promote pudding.png" alt=""></div>
+        </div>
+    </section>
     <!-- 門市查詢 -->
 
     <!-- 商品查詢 -->
@@ -38,6 +79,7 @@
     <!-- 其他服務 -->
 
     <!-- footer -->
-<footer></footer>
+    <footer></footer>
 </body>
+
 </html>
