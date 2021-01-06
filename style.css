@@ -10,20 +10,30 @@ body {
 nav {
     display: grid;
     grid-template-columns: 10% 75% auto;
-    background: linear-gradient(0deg,#EBFF5F 0%,#6ABD0D 35%,#6ABD0D 65%,#EBFF5F 100%);
+    background: linear-gradient(0deg,#84d824 0%, #92e92f 8%,#C5E86C 87%);
     box-shadow: 0 5px 10px rgba(0,0,0,0.15);
     padding: 15px 25px;/*p15px25px*/
     align-items: center;/*grid專用的格內垂直對齊*/
 }
 #logo img {
-    height: 65px;
+    height: 64px;
 }
 #navi {padding: 15px;}
 #navi a {
     font-weight: 700;
     font-size : 18px ;
+    color:#274009;
     text-decoration: none;
-    padding: 10px;
+    padding: 20px 10px;
+    border: 1px solid transparent;
+    border-radius: 80px / 20px ;
+}
+#navi a:hover {
+    background-color: rgba(255, 255, 255,0.2);
+    border: 1px solid rgba(135, 187, 74, 0.4);
+}
+#navi a:active {
+    background-color: rgba(135, 187, 74, 0.4);
 }
 #social {
     background-color: #98546a;/*TEST*/
