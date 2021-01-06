@@ -55,19 +55,56 @@ nav {
 #promote div:nth-child(1) .pic img {
     object-position: left;
 }
+#promote div:nth-child(even) {
+    grid-template-areas: "pic text";
+    grid-template-columns: 60% 40%;
+}
 #promote div:nth-child(even) .text {
-    grid-area: text;/*取名直接key不用字串形式*/
+    grid-area: text;/*取名就直接key，不用字串形式*/
+}
+#promote div:nth-child(even) .pic {
+    grid-area: pic ;/**取名就直接key，不用字串形式 */
 }
 #promote .text h1 {
     padding-bottom: 25px;
 }
 #promote .text p {
     width: 300px;
+    margin-bottom: 12% ;
     line-height: 2;
     padding-top: 20px ;
 }
+.btn {
+    border: 1px solid #274009 ;
+    padding: 13px 22px;
+    font-weight: 500;
+    color: #274009;
+    text-decoration: none;
+    transition: 3s ;/*! 為什麼不是變色的時間*/
+}
+.btn:hover {
+    background-image: linear-gradient(to right top,#84d824 0%, #92e92f 8%,#C5E86C 87%) ;
+    color: #274009;
+}
 /* 門市查詢  */
-
+#BrInfo {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 20px;
+    text-align: center;
+}
+#BrInfo .four {
+    font-size: 32px;
+    font-weight: 700;
+    border: 1px solid #000;
+}
+#BrInfo div:nth-child(1) .four {background-color: rgb(255, 206, 249);}
+#BrInfo div:nth-child(2) .four {background-color: rgb(255, 254, 206);}
+#BrInfo div:nth-child(3) .four {background-color: rgb(206, 255, 228);}
+#BrInfo div:nth-child(4) .four {background-color: rgb(206, 248, 255);}
+#BrInfo div .BrList p {
+    line-height: 2;
+}
 /* 商品查詢  */
 
 /* 活動資訊  */
