@@ -132,3 +132,30 @@ nav {
 /* 其他服務  */
 
 /* footer  */
+footer {
+    margin-top: 100px;
+    background: linear-gradient(180deg,#84d824 0%, #92e92f 8%,#C5E86C 87%);
+    box-shadow: 0 -5px 10px rgba(0,0,0,0.15);
+}
+#Ufoot {
+    padding: 20px 0 100px 25%;
+    color:#274009;
+    font-weight: 400;
+    line-height: 2.5 ;
+}
+#email {
+    text-decoration: none;
+    color:#274009;
+    transition: .5s;
+}
+#email hover {
+    color:#DD2525 ;
+}
+#Lfoot {
+    padding: 0 5px 10px 0;
+}
+#copyright {
+    font-weight: 300;
+    text-align: right;
+    color:beige;
+}
