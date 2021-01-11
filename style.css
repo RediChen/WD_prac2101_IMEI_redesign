@@ -35,14 +35,14 @@ nav {
 #navi a:active {
     background-color: rgba(135, 187, 74, 0.4);
 }
-#social {text-align: center;}
-#social a {text-decoration: none;}
-#social a img {border: 4px solid transparent;}
-#social a img:hover {
+.social {text-align: center;}
+.social a {text-decoration: none;}
+.social a img {border: 4px solid transparent;}
+.social a img:hover {
     width: 40px;
     border: none;
 }
-#social a img:active {filter: invert(10%);}
+.social a img:active {filter: invert(10%);}
 /* 公告  */
 /* 輪播圖使用現成的套件 */
 
@@ -83,6 +83,13 @@ nav {
     max-width: 300px;
     line-height: 2;
 }
+#NewPd {
+    font-weight: 700;
+    color :mediumpurple;
+    text-align: center;
+    line-height: 2.5;
+    background-color: rgba(255, 224, 255,0.3);
+}
 .BtnBox {
     padding: 15px 0;
     text-align: right;
@@ -110,8 +117,10 @@ nav {
 #BrInfo {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    margin-top: 75px;
+    margin: 75px 5px 0;
+    padding: 5px;
     text-align: center;
+    background-color: #ffe3e349;
 }
 #BrInfo .four {
     font-size: 32px;
@@ -142,6 +151,8 @@ footer {
     color:#274009;
     font-weight: 400;
     line-height: 2.5 ;
+    display: grid;
+    grid-template-columns: 70% auto;
 }
 #email {
     text-decoration: none;
@@ -155,7 +166,8 @@ footer {
     padding: 0 5px 10px 0;
 }
 #copyright {
-    font-weight: 300;
-    text-align: right;
-    color:beige;
+    font-weight: 200;
+    font-size: 10px;
+    text-align: center;
+    color : #999999 ;
 }
