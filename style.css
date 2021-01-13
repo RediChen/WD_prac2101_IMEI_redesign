@@ -154,20 +154,19 @@ footer {
     display: grid;
     grid-template-columns: 70% auto;
 }
-#email {
+#email, #phone {
     text-decoration: none;
     color:#274009;
     transition: .5s;
 }
-#email hover {
-    color:#DD2525 ;
+#email:hover, #phone:hover {
+    color:#983737 ;
 }
-#Lfoot {
-    padding: 0 5px 10px 0;
-}
+
 #copyright {
+    padding-top: 5px;
     font-weight: 200;
     font-size: 10px;
     text-align: center;
-    color : #999999 ;
+    color : #274009aa ;
 }
