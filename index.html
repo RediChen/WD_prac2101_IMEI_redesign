@@ -6,11 +6,19 @@
     <meta name="author" content="Redii Chen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>義美 | I-MEI</title>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Our own CSS -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="./style.css" />
+    <!-- AOS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Slick CDN -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <!-- 1st line 包含點點韓箭頭的樣式，必要。 -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+        <!-- 2nd line 包含Slick的基本功能，必要。 -->
 </head>
 
 <body>
@@ -37,7 +45,12 @@
         </div>
     </nav>
     <!--* 公告 ================================= -->
-    <!--輪播圖使用現成的code套件-->
+    <div id="ANNC">
+        <div class="banner"></div>
+        <div class="banner"></div>
+        <div class="banner"></div>
+    </div>
+    
     <!--* 主打商品 ============================= -->
     <!-- section>(div>.text>h1+hr+p+a^.pic>img)*3 -->
     <section id="promote">
@@ -160,13 +173,20 @@
             
         </div>
 
-        <!--* 版權 -->
+        <!-- 版權 -->
         <h5 id="copyright">版權所有 &copy; 義美食品公司 I-MEI Foods Inc.</h5>
     </footer>
 
+    <!--* JS 宣告區 =============================-->
     <!--啟動AOS的程序-->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>AOS.init();</script>
+    <!-- 連線jQuery庫 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Slick CDN -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Our own JS：等前面的都連接完才可以讓JS去使用程式庫-->
+    <script src="./main.js"></script>
 </body>
 
 </html>
