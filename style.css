@@ -4,9 +4,9 @@
 }
 body {
     background-image: url();/*TODO */
-    font-family: 'Noto Serif TC', serif;
+    font-family: 'Noto Serif TC', serif;/*serif是作為備用的字體選項*/
 }
-/* 導覽列 */
+/** 導覽列 ============================================= */
 nav {
     display: grid;
     grid-template-columns: 10% 75% auto;
@@ -17,7 +17,8 @@ nav {
 }
 #logo img {height: 64px;}
 #navi {padding: 15px;}
-#navi a {
+/*a的link&visited若要一起設定，不能用加號，而逗號則必須指名道姓*/
+#navi > a:link, #navi > a:visited {
     font-weight: 700;
     font-size : 18px ;
     color:#274009;
@@ -46,7 +47,7 @@ nav {
 /* 公告  */
 /* 輪播圖使用現成的套件 */
 
-/* 主打商品(link to 商品型錄)  */
+/* 主打商品 ============================================= */
 #promote > div {/*用 > 代表指定層級*/
     display: grid;
     grid-template-columns: 40% 60%;
@@ -113,7 +114,7 @@ nav {
     color: #274009;
     background-color:#c5e86c3b;
 }
-/* 門市查詢  */
+/** 門市查詢 ============================================= */
 #BrInfo {
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -140,31 +141,54 @@ nav {
 
 /* 其他服務  */
 
-/* footer  */
+/** 頁尾 ============================================= */
 footer {
     margin-top: 100px;
     background: linear-gradient(180deg,#84d824 0%, #92e92f 8%,#C5E86C 87%);
     box-shadow: 0 -5px 10px rgba(0,0,0,0.15);
 }
-#Ufoot {
-    padding: 20px 0 100px 25%;
-    color:#274009;
-    font-weight: 400;
-    line-height: 2.5 ;
+#link-wrap {
+    padding: 20px 0 0 5%;
+    font-size: 14px;
+    line-height: 1.5 ;
     display: grid;
-    grid-template-columns: 70% auto;
+    grid-template-columns: 10% 35% 25% auto;
 }
-#email, #phone {
+#link-wrap > div:nth-child(1) {background-color: antiquewhite;}
+/* todo ^此鋪色待刪 */
+#link-wrap h4 {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color:#274009cc;
+}
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    vertical-align: middle ;
+}
+#link-wrap hr {
+    border-color: rgba(0,0,0,0);
+    background-color: #27400933;
+    margin-right: 20%;
+}
+#link-wrap ul {
+    margin-top: 20px;
+    list-style-type: none;
+    font-weight: 400;
+    color:#27400999;
+    line-height: 2.5;
+}
+#link-wrap a:link, #link-wrap a:visited {
     text-decoration: none;
-    color:#274009;
+    color: inherit; /*繼承父元素的格式設定~x超連結預設*/
     transition: .5s;
 }
-#email:hover, #phone:hover {
+#link-wrap a:hover {
     color:#983737 ;
 }
-
 #copyright {
-    padding-top: 5px;
+    padding-top: 35px;
     font-weight: 200;
     font-size: 10px;
     text-align: center;
