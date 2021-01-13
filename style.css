@@ -14,6 +14,12 @@ nav {
     box-shadow: 0 5px 10px rgba(0,0,0,0.15);
     padding: 15px 0px 15px 25px;
     align-items: center;/*grid專用的格內垂直對齊*/
+    opacity: 0.9;
+
+    /* 使用固定模式的定位：寬度會不見，須額外調整 */
+    position: fixed;/*預設就是最頂端*/
+    width: 100%;/*w100p*/
+    z-index: 3 ;/*因為輪播圖的z座標較高，所以需要調高*/
 }
 #logo img {height: 64px;}
 #navi {padding: 15px;}
@@ -45,13 +51,11 @@ nav {
 }
 .social a img:active {filter: invert(10%);}
 /** 公告、NEWS == 輪播圖================================== */
+#ANNC {padding-top: 97px;}/*此調整是因為讓頂部不會被固定的導覽列遮住*/
 #ANNC div {/*! 因為Slick作用，結構會變更多層的div。才需要全面地改div的h*/
     height: 40vh;
     background-repeat: no-repeat;
 }
-#ANNC .banner:nth-child(1) {background-image: url(/img/ANNC\ 01\ -\ label\ what\ it\ is.png);}
-#ANNC .banner:nth-child(2) {background-image: url(/img/ANNC\ 02\ -\ label\ what\ it\ is.png);}
-#ANNC .banner:nth-child(3) {background-image: url(/img/ANNC\ 03\ -\ PE\ material.png);}
 /* 更改Slick套件生成的隱藏物件 */
 #ANNC .slick-prev {
     left: 25px ;
@@ -158,8 +162,34 @@ nav {
 
 /* 活動資訊  */
 
-/* 其他服務  */
-
+/** 其他服務 ============================================= */
+#other-serv {
+    margin-top: 100px;
+    text-align: center;
+}
+#other-serv > h1 {
+    background-color:#a19a9a2d ;
+    text-align: center;
+    margin: 0 40%;
+    padding: 20px 0;
+}
+#service {
+    max-width: 1280px;
+    margin: 20px auto 0;
+}
+#service div:focus {outline: none;}
+/* 將套件預設的黑色邊框效果去除 */
+#service img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* 用圓角改成圓形的前提：原本形狀要是正方形 */
+    transition: .5s;
+}
+#service img:hover {
+    border-radius: 0;
+}
 /** 頁尾 ============================================= */
 footer {
     margin-top: 100px;
@@ -194,7 +224,7 @@ footer {
 #link-wrap ul {
     margin-top: 20px;
     list-style-type: none;
-    font-weight: 400;
+    font-weight: 600;
     color:#27400999;
     line-height: 3;
 }

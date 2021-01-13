@@ -5,3 +5,6 @@ $("#ANNC").slick({
     speed : 500,
     easing : 'linear'
 }) ;
+$("#service").slick({
+    slidesToShow : 3
+});

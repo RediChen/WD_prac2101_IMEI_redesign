@@ -15,10 +15,11 @@
     <!-- AOS CDN -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Slick CDN -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-        <!-- 1st line 包含點點韓箭頭的樣式，必要。 -->
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-        <!-- 2nd line 包含Slick的基本功能，必要。 -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- 1st line 包含點點韓箭頭的樣式，必要。 -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!-- 2nd line 包含Slick的基本功能，必要。 -->
+    <link rel="shortcut icon" href="./img/iconIMEI.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -46,11 +47,13 @@
     </nav>
     <!--* 公告 ================================= -->
     <div id="ANNC">
-        <div class="banner"></div>
-        <div class="banner"></div>
-        <div class="banner"></div>
+        <div style="background-image: url(/img/ANNC\ 01\ -\ label\ what\ it\ is.png);"></div>
+        <div style="background-image: url(/img/ANNC\ 02\ -\ label\ what\ it\ is.png);"></div>
+        <div style="background-image: url(/img/ANNC\ 03\ -\ PE\ material.png);"></div>
+        <!-- 此作法可以在圖上堆疊文字 -->
+        <!-- ! Slick擴充這裡格局的關係，圖片無法用nth.child去選取。 -->
     </div>
-    
+
     <!--* 主打商品 ============================= -->
     <!-- section>(div>.text>h1+hr+p+a^.pic>img)*3 -->
     <section id="promote">
@@ -125,10 +128,37 @@
     <!--* 活動資訊============================= -->
 
     <!--* 其他服務============================= -->
-
+    <section id="other-serv">
+        <h1>其他服務</h1>
+        <!--TODO 此區使用暫時的素材-->
+        <!-- #service>(.img+h1)*5 -->
+        <div id="service">
+            <div>
+                <img src="./img/Temp-01.jpg" alt="">
+                <h1>義美生機</h1>
+            </div>
+            <div>
+                <img src="./img/Temp-02.jpg" alt="">
+                <h1>義美生醫</h1>
+            </div>
+            <div>
+                <img src="./img/Temp-03.jpg" alt="">
+                <h1>義美彌月蛋糕</h1>
+            </div>
+            <div>
+                <img src="./img/Temp-04.jpg" alt="">
+                <h1>義美蛋糕&bull;囍餅</h1>
+            </div>
+            <div>
+                <img src="./img/Temp-05.jpg" alt="">
+                <h1>會員專區</h1>
+            </div>
+        </div>
+    </section>
     <!--* Footer =============================-->
     <footer>
-        <div class="social"><!--TODO 尚未移進link-wrap-->
+        <div class="social">
+            <!--TODO 尚未移進link-wrap-->
             <a href="https://www.facebook.com/imeifoods" target="blank">
                 <img src="./img/icon_FB.png" alt="facebook 義美粉絲專頁">
             </a>
@@ -138,11 +168,15 @@
         </div>
         <!-- IG LINK ADDed : https://www.instagram.com/imei.tw/ -->
         <div id="link-wrap">
-            <div><!--wrap 1--><!--TODO　wrap 1：social-->
+            <div>
+                <!--wrap 1-->
+                <!--TODO　wrap 1：social-->
                 <h4>這裡要擺LOGO<br>和三個icon的連結</h1>
             </div>
-            <div><!--wrap 2-->
-                <h4>聯絡我們</h4><hr>
+            <div>
+                <!--wrap 2-->
+                <h4>聯絡我們</h4>
+                <hr>
                 <ul>
                     <li><img class="contact-icon" src="./img/icon phone.png" alt="客服電話">
                         <a class="hlink" href="tel:0800-255-999">0800-255-999</a>
@@ -151,26 +185,34 @@
                     <li><img class="contact-icon" src="./img/icon clock.png" alt="客服服務時間">週一~週日08:00-18:00</li>
                 </ul>
             </div>
-            <div><!--wrap 3-->
-                <h4>其他資訊</h4><hr>
+            <div>
+                <!--wrap 3-->
+                <h4>其他資訊</h4>
+                <hr>
                 <ul>
                     <li><a class="hlink" href="https://www.healthimei.com/" target="blank">義美生機</a></li>
                     <li><a class="hlink" href="https://www.biomedimei.com/" target="blank">義美生醫</a></li>
                     <li><a class="hlink" href="" target="blank">門市列表</a></li>
                     <!-- TODO 門市列表的連結 -->
-                    <li><a class="hlink" href="https://imec.imeifoods.com.tw/pages/舊會員歡迎回歸" target="blank">舊會員回娘家</a></li>
+                    <li><a class="hlink" href="https://imec.imeifoods.com.tw/pages/舊會員歡迎回歸" target="blank">舊會員回娘家</a>
+                    </li>
                     <li><a class="hlink" href="https://imec.imeifoods.com.tw/" target="blank">義美美食安心購</a></li>
                 </ul>
             </div>
-            <div><!--wrap 4-->
-                <h4>相關政策</h4><hr>
+            <div>
+                <!--wrap 4-->
+                <h4>相關政策</h4>
+                <hr>
                 <ul>
-                    <li><a class="hlink" href="https://imec.imeifoods.com.tw/pages/privacy" target="blank">隱私權政策</a></li>
-                    <li><a class="hlink" href="https://imec.imeifoods.com.tw/pages/terms" target="blank">會員須知與權益</a></li>
-                    <li><a class="hlink" href="https://imec.imeifoods.com.tw/pages/產品責任險食登字號" target="blank">責任產品險/食登字號</a></li>
+                    <li><a class="hlink" href="https://imec.imeifoods.com.tw/pages/privacy" target="blank">隱私權政策</a>
+                    </li>
+                    <li><a class="hlink" href="https://imec.imeifoods.com.tw/pages/terms" target="blank">會員須知與權益</a>
+                    </li>
+                    <li><a class="hlink" href="https://imec.imeifoods.com.tw/pages/產品責任險食登字號"
+                            target="blank">責任產品險/食登字號</a></li>
                 </ul>
             </div>
-            
+
         </div>
 
         <!-- 版權 -->
