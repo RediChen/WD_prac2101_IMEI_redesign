@@ -51,17 +51,24 @@ nav {
 }
 .social a img:active {filter: invert(10%);}
 /** 公告、NEWS == 輪播圖================================== */
-#ANNC {padding-top: 97px;}/*此調整是因為讓頂部不會被固定的導覽列遮住*/
+#ANNC {
+    padding-top: 97px;
+    margin: 0 auto;
+    max-width: 1000px;
+}/*此調整是因為讓頂部不會被固定的導覽列遮住*/
 #ANNC div {/*! 因為Slick作用，結構會變更多層的div。才需要全面地改div的h*/
-    height: 40vh;
+    height: 50vh;
+    object-fit: contain;
     background-repeat: no-repeat;
 }
 /* 更改Slick套件生成的隱藏物件 */
 #ANNC .slick-prev {
     left: 25px ;
+    z-index: 2;
 }
 #ANNC .slick-next {
-    right: -20px ;
+    right: 5px ;
+    top : 200px ;
 }
 #ANNC .slick-dots {
     bottom: 5px;
