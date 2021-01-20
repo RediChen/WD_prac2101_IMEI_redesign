@@ -1,7 +1,8 @@
-* {
+* {/*全員內外距歸零*/
     padding: 0;
     margin: 0;
 }
+a {text-decoration: none;}/*全員超連結底線歸零*/
 body {
     background-image: url();/*TODO */
     font-family: 'Noto Serif TC', serif;/*serif是作為備用的字體選項*/
@@ -14,7 +15,6 @@ nav {
     box-shadow: 0 5px 10px rgba(0,0,0,0.15);
     padding: 15px 0px 15px 25px;
     align-items: center;/*grid專用的格內垂直對齊*/
-    opacity: 0.9;
 
     /* 使用固定模式的定位：寬度會不見，須額外調整 */
     position: fixed;/*預設就是最頂端*/
@@ -28,7 +28,6 @@ nav {
     font-weight: 700;
     font-size : 18px ;
     color:#274009;
-    text-decoration: none;
     padding: 20px 10px;
     border: 1px solid transparent;
     border-radius: 80px / 20px ;
@@ -52,31 +51,35 @@ nav {
 .social a img:active {filter: invert(10%);}
 /** 公告、NEWS == 輪播圖================================== */
 #ANNC {
-    padding-top: 97px;
+    padding-top: 97px;/* in order to 讓頂部不會被固定的導覽列遮住*/
     margin: 0 auto;
     max-width: 1000px;
-}/*此調整是因為讓頂部不會被固定的導覽列遮住*/
+}
 #ANNC div {/*! 因為Slick作用，結構會變更多層的div。才需要全面地改div的h*/
-    height: 50vh;
-    object-fit: contain;
+    height: 40vh;
+    object-fit: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 /* 更改Slick套件生成的隱藏物件 */
 #ANNC .slick-prev {
     left: 25px ;
     z-index: 2;
+    /* 因為預設沒有比圖群高 */
+    top : 300px ;
 }
 #ANNC .slick-next {
     right: 5px ;
-    top : 200px ;
+    top : 300px ;
+}
+#ANNC .slick-next::before {/*TEST*/
+    color: DARKGREEN;
 }
 #ANNC .slick-dots {
-    bottom: 5px;
+    bottom: 7px;/* 因為預設會在圖下方 */
 }
 /** 主打商品 ============================================= */
-#promote {
-    margin-top: 100px;
-}
+#promote {margin-top: 50px;}
 #promote > div {/*用 > 代表指定層級*/
     display: grid;
     grid-template-columns: 40% 60%;
@@ -126,7 +129,7 @@ nav {
 }
 .btn {
     border: 1px solid #274009 ;
-    padding: 13px 17px 9px 19px;/*包含ls的補償*/
+    padding: 10px 17px 9px 19px;/*包含ls的補償*/
     text-decoration: none;
     font-family: Helvetica;
     font-weight: 900;
@@ -145,23 +148,36 @@ nav {
 }
 /** 門市查詢 ============================================= */
 #BrInfo {
+    margin: 75px 5px 0;
+}
+#BrInfo .BrTitle h1 {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+#BrInfo .BrTitle hr {
+    margin: 0 auto;
+    max-width: 400px;
+    width: 40%;
+    margin-bottom: 50px;
+}
+#BrInfo #BrWrap {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    margin: 75px 5px 0;
     padding: 5px;
     text-align: center;
     background-color: #ffe3e349;
 }
-#BrInfo .four {
+#BrInfo #BrWrap .BrDir4 {
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 600;
     border: 1px solid #000;
 }
-#BrInfo div:nth-child(1) .four {background-color: rgba(255, 206, 249,0.25);}
-#BrInfo div:nth-child(2) .four {background-color: rgba(255, 254, 206,0.25);}
-#BrInfo div:nth-child(3) .four {background-color: rgba(206, 255, 228,0.25);}
-#BrInfo div:nth-child(4) .four {background-color: rgba(206, 248, 255,0.25);}
-#BrInfo div .BrList p {
+#BrInfo #BrWrap div:nth-child(1) .BrDir4 {background-color: rgba(255, 206, 249,0.25);}
+#BrInfo #BrWrap div:nth-child(2) .BrDir4 {background-color: rgba(255, 254, 206,0.25);}
+#BrInfo #BrWrap div:nth-child(3) .BrDir4 {background-color: rgba(206, 255, 228,0.25);}
+#BrInfo #BrWrap div:nth-child(4) .BrDir4 {background-color: rgba(206, 248, 255,0.25);}
+#BrInfo #BrWrap div .BrList p {
     font-size: 20px;
     line-height: 2;
 }
