@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="./style.css" />
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;800;900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
     <!-- AOS CDN -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -35,12 +36,15 @@
             <a href="">活動訊息</a>
             <a href="">其他服務</a>
         </div>
-        <div class="social">
+        <div id="nav-soc-wrap">
             <!--圖片超連結：a img /a-->
-            <a href="https://www.facebook.com/imeifoods" target="blank">
+            <a class="social" href="https://www.facebook.com/imeifoods" target="blank">
                 <img src="./img/icon_FB.png" alt="facebook 義美粉絲專頁">
             </a>
-            <a href="https://www.youtube.com/user/foodschannel" target="blank">
+            <a class="social" href="https://www.instagram.com/imei.tw/" target="blank">
+                <img src="./img/icon_IG.png" alt="instagram 義美食品IG">
+            </a>
+            <a class="social" href="https://www.youtube.com/user/foodschannel" target="blank">
                 <img src="./img/icon_YT.png" alt="youtube 義美食品頻道">
             </a>
         </div>
@@ -51,7 +55,7 @@
         <div style="background-image: url(/img/ANNC\ 02\ -\ label\ what\ it\ is.png);"></div>
         <div style="background-image: url(/img/ANNC\ 03\ -\ PE\ material.png);"></div>
         <!-- 此作法可以在圖上堆疊文字 -->
-        <!-- ! Slick擴充這裡格局的關係，圖片無法用nth.child去選取。 -->
+        <!-- ! Slick會擴充格局和調換順序的關係，圖片無法用nth.child去選取。 -->
     </div>
 
     <!--* 主打商品 ============================= -->
@@ -107,36 +111,37 @@
             <div>
                 <div class="BrDir4">北部</div>
                 <div class="BrList">
-                    <p><a href="">基隆市</a></p>
-                    <p><a href="">雙北市</a></p>
-                    <p><a href="">桃園市</a></p>
-                    <p><a href="">新竹縣市</a></p>
-                    <p><a href="">宜蘭縣</a></p>
+                    <p><a href="https://www.imeifoods.com.tw/retail/#01">基隆市</a></p>
+                    <p><a href="https://www.imeifoods.com.tw/retail/#02">台北市</a></p>
+                    <p><a href="https://www.imeifoods.com.tw/retail/#03">新北市</a></p>
+                    <p><a href="https://www.imeifoods.com.tw/retail/#04">桃園市</a></p>
+                    <p><a href="https://www.imeifoods.com.tw/retail/#05">新竹縣市</a></p>
+                    <p><a href="https://www.imeifoods.com.tw/retail/#07">宜蘭縣</a></p>
                 </div>
             </div>
             <div>
                 <div class="BrDir4">中部</div>
                 <div class="BrList">
-                    <p><a href="">苗栗市</a></p>
-                    <p><a href="">台中市</a></p>
-                    <p><a href="">彰化縣市</a></p>
-                    <p><a href="">雲林縣</a></p>
+                    <p><a href="https://www.imeifoods.com.tw/retail/#08">苗栗市</a></p>
+                    <p><a href="https://www.imeifoods.com.tw/retail/#09">台中市</a></p>
+                    <p><a href="https://www.imeifoods.com.tw/retail/#10">彰化縣市</a></p>
+                    <p><a href="https://www.imeifoods.com.tw/retail/#12">雲林縣</a></p>
                 </div>
             </div>
             <div>
                 <div class="BrDir4">南部</div>
                 <div class="BrList">
-                    <p><a href="">嘉義縣市</a></p>
-                    <p><a href="">台南市</a></p>
-                    <p><a href="">高雄市</a></p>
-                    <p><a href="">屏東市</a></p>
+                    <p><a href="https://www.imeifoods.com.tw/retail/#13">嘉義縣市</a></p>
+                    <p><a href="https://www.imeifoods.com.tw/retail/#15">台南市</a></p>
+                    <p><a href="https://www.imeifoods.com.tw/retail/#16">高雄市</a></p>
+                    <p><a href="https://www.imeifoods.com.tw/retail/#17">屏東市</a></p>
                 </div>
             </div>
             <div>
                 <div class="BrDir4">東部</div>
                 <div class="BrList">
-                    <p><a href="">花蓮市</a></p>
-                    <p><a href="">台東市</a></p>
+                    <p><a href="https://www.imeifoods.com.tw/retail/#18">花蓮市</a></p>
+                    <p><a href="https://www.imeifoods.com.tw/retail/#19">台東市</a></p>
                 </div>
             </div>
         </div>
@@ -175,24 +180,22 @@
     </section>
     <!--* Footer =============================-->
     <footer>
-        <div class="social">
-            <!--TODO 尚未移進link-wrap-->
-            <a href="https://www.facebook.com/imeifoods" target="blank">
-                <img src="./img/icon_FB.png" alt="facebook 義美粉絲專頁">
-            </a>
-            <a href="https://www.youtube.com/user/foodschannel" target="blank">
-                <img src="./img/icon_YT.png" alt="youtube 義美食品頻道">
-            </a>
-        </div>
-        <!-- IG LINK ADDed : https://www.instagram.com/imei.tw/ -->
         <div id="link-wrap">
-            <div>
-                <!--wrap 1-->
-                <!--TODO　wrap 1：social-->
-                <h4>這裡要擺LOGO<br>和三個icon的連結</h4>
+            <!--wrap 1-->
+            <div id="footer-soc-wrap">
+                <a href="#"><img src="./img/LOGO_64px.png" alt="I-MEI 義美 LOGO"></a>
+                <a class="social" href="https://www.facebook.com/imeifoods" target="blank">
+                    <img src="./img/icon_FB.png" alt="facebook 義美粉絲專頁">
+                </a>
+                <a class="social" href="https://www.instagram.com/imei.tw/" target="blank">
+                    <img src="./img/icon_IG.png" alt="instagram 義美食品IG">
+                </a>
+                <a class="social" href="https://www.youtube.com/user/foodschannel" target="blank">
+                    <img src="./img/icon_YT.png" alt="youtube 義美食品頻道 I-MEI foods channel">
+                </a>
             </div>
+            <!--wrap 2-->
             <div>
-                <!--wrap 2-->
                 <h4>聯絡我們</h4>
                 <hr>
                 <ul>
